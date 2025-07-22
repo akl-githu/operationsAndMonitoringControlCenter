@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<form method="post" action="/Account/Login">
+    
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <label for="role">Role:</label>
+    <select id="role" name="role" required>
+        <option></option>
+        <option value="Admin">Admin</option>
+        <option value="Viewer">Viewer</option>
+    </select>
+    
+    <button type="submit" class="login-button">Log In</button>
+</form>
