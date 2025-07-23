@@ -1,14 +1,21 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: white;
     color: black;
+    margin-bottom: 60px;
 }
 
 .home-container {
     display: flex;
     height: 100vh;
+    flex-direction: row; /* Default layout: vertical sections */
 }
 
 .left-section {
@@ -42,27 +49,26 @@ body {
     cursor: pointer;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Change layout to horizontal sections */
+    }
+
+    .left-section, .right-section {
+        flex: none; /* Reset flex property */
+        width: 100%; /* Make sections take full width */
+        height: auto; /* Adjust height */
+    }
+
+    .right-section {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
 }
 
-html {
-  font-size: 14px;
-}
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+/*.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -72,4 +78,4 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
-}
+}*/
