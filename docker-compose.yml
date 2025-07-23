@@ -3,8 +3,8 @@ version: '3.8'
 services:
   mysql-container:
     build:
-      context: ./mysql-container
-      dockerfile: Dockerfile
+      context: . #/mysql-container
+      dockerfile: mysql-Dockerfile
     container_name: mysql-container
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
@@ -21,7 +21,7 @@ services:
   webapp-container:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: app-Dockerfile
     container_name: webapp-container
     ports:
       - "8888:8080"
