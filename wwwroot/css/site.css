@@ -40,6 +40,14 @@ body {
     align-items: center;
 }
 
+.right-section h1 {
+    text-align: center;
+}
+
+.right-section p {
+    text-align: left;
+}
+
 .login-button {
     padding: 10px 20px;
     background-color: red;
@@ -47,6 +55,11 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #b30000; /* Darker red on hover */
 }
 
 /* Responsive Design for Small Screens */

@@ -1,0 +1,68 @@
+/* Login Page Styling */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    background-color: white; /* Dark background */
+    color: white; /* Text color */
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px; /* Limit form width */
+    background-color: whitesmoke; /* Form background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #1a1a1a; /* Label color */
+}
+
+.login-form input,
+.login-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white; /* Input background */
+    color: #1a1a1a; /* Input text color */
+}
+
+.login-form input::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: red; /* Button background */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #b30000; /* Darker red on hover */
+}
+
+/* Responsive Design for Login Page */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    .login-form {
+        width: 100%; /* Make form take full width */
+    }
+}
