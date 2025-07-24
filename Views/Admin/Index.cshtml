@@ -2,4 +2,63 @@
     ViewData["Title"] = "Admin Page";
 }
 
-<h1>Admin Dashboard</h1><p>Welcome to the Admin page.</p>
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="/css/admin.css"> <!-- Link to the admin.css file -->
+    </head>
+    
+    <body>
+        <div class="admin-container"><!-- Vertical Menu -->
+            <nav class="vertical-menu">
+                <ul>
+                    <li class="menu-item">User Management
+                        <ul class="submenu">
+                            <li>Add User</li>
+                            <li>Edit User</li>
+                            <li>Delete User</li>
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item">Platform Management
+                        <ul class="submenu">
+                            <li>Add Platform</li>
+                            <li>Edit Platform</li>
+                            <li>Delete Platform</li>
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item">Platform KPI
+                        <ul class="submenu">
+                            <li>View KPI</li>
+                            <li>Update KPI</li>
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item">Platform Tracker
+                        <ul class="submenu">
+                            <li>Track Platform</li>
+                            <li>View Tracker Logs</li>
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item">Help?
+                        <ul class="submenu">
+                            <li>FAQs</li>
+                            <li>Contact Support</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav><!-- Main Content Area -->
+            
+            <div class="main-content">
+                <h1>Welcome to the Admin Dashboard</h1>
+                <p>Select a menu item to manage the platform or users.</p>
+            </div>
+        </div>
+    </body>
+</html>
