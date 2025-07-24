@@ -1,4 +1,3 @@
-//using controlCenter.Models;
 using controlCenter.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,21 +21,30 @@ namespace controlCenter.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string username, string password, string role)
+        public IActionResult Login(string username, string password)
         {
+            // Authenticate the user
             var user = _userService.GetUserByUsernameAndPassword(username, password);
-            if (user != null && user.Role == role)
+            if (user != null)
             {
+                // Record login action in the audit log
                 _auditService.RecordAction(username, "Logged in");
 
-                if (role == "Admin")
+                // Redirect based on the user's role
+                if (user.Role == "Admin")
+                {
                     return RedirectToAction("Index", "Admin");
-                else if (role == "Viewer")
+                }
+                else if (user.Role == "Viewer")
+                {
                     return RedirectToAction("Index", "Viewer");
+                }
             }
 
-            ViewBag.Error = "Invalid credentials or role.";
+            // If authentication fails, show an error message
+            ViewBag.Error = "Invalid username or password.";
             return View();
         }
     }
 }
+

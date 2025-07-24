@@ -30,7 +30,7 @@ namespace controlCenter.Services
                             Id = reader.GetInt32("Id"),
                             Username = reader.GetString("Username"),
                             PasswordHash = reader.GetString("PasswordHash"),
-                            Role = reader.GetString("Role")
+                            Role = reader.GetString("Role") // Fetch the user's role
                         };
                     }
                 }
