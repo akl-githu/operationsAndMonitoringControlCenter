@@ -3,21 +3,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
-    color: black;
+    background-color: white; /* White background for better readability */
+    color: black; /* Black text color */
 }
 
-/* Admin Page Container */
-.admin-container {
+/* Viewer Page Container */
+.viewer-container {
     display: flex;
-    height: 100vh;
+    height: 100vh; /* Adjust height to account for footer */
 }
 
 /* Vertical Menu Styling */
 .vertical-menu {
     width: 250px;
-    height: 90vh;
-    background-color: whitesmoke;
+    background-color: whitesmoke; /* Dark background for menu */
     border-right: 1px solid red; /* Thin separator */
     padding: 10px 0;
 }
@@ -75,7 +74,7 @@ body {
 .main-content {
     flex: 1;
     padding: 20px;
-    background-color: white;
+    background-color: white; /* White background for content */
 }
 
 .main-content h1 {
@@ -84,13 +83,22 @@ body {
 }
 
 .main-content p {
-    color: black;
+    color: black; /* Black text color */
     font-size: 1.2rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: white; /* Footer background remains dark */
+    color: black;
+    text-align: center;
+    padding: 10px 0; /* Add padding to footer */
+    border-top: 1px solid red; /* Add a top border to separate footer */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .admin-container {
+    .viewer-container {
         flex-direction: column;
     }
 
