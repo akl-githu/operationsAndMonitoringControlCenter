@@ -63,8 +63,29 @@
             </nav><!-- Main Content Area -->
             
             <div class="main-content" id="admin-main-content">
-                <h1>Welcome to the Admin Dashboard</h1>
-                <p>Select a menu item to manage the platform or users.</p>
+                <h1>Users Table</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.Id</td>
+                                <td>@user.Username</td>
+                                <td>@user.PasswordHash</td>
+                                <td>@user.Role</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            
             </div>
         </div>
     </body>

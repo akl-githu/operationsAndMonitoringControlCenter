@@ -74,8 +74,10 @@ body {
 /* Main Content Styling */
 .main-content {
     flex: 1;
-    padding: 20px;
-    background-color: white;
+    padding: 20px; /* Add padding to create space between menu and content */
+    margin-left: 10px; /* Add margin to separate content from menu */
+    background-color: white; /* White background for content */
+    overflow: auto; /* Enable scrolling for large content */
 }
 
 .main-content h1 {
@@ -86,6 +88,30 @@ body {
 .main-content p {
     color: black;
     font-size: 1.2rem;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid red; /* Add border around the table */
+}
+
+table th, table td {
+    border: 1px solid red; /* Add border for individual cells */
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1a1a1a; /* Dark background for header */
+    color: white; /* White text for header */
+}
+
+table td {
+    background-color: white; /* White background for cells */
+    color: black; /* Black text for cells */
 }
 
 /* Responsive Design */
