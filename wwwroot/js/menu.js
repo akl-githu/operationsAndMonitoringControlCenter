@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
             switch (itemId) {
                 // Admin Page Submenu Items
                 case "add-user":
-                    content = `<h2>Add User</h2><form method="post" action="/Admin/AddUser" class="add-user-form"><label for="username">Username:</label><input type="text" id="username" name="username" required><label for="password">Password:</label><input type="password" id="password" name="password" required><label for="role">Role:</label><select id="role" name="role" required><option></option><option value="Admin">Admin</option><option value="Viewer">Viewer</option></select><button type="submit" class="add-button">Add</button></form>`;
+                    content = `<h2>Add User</h2><form method="post" action="/Admin/AddUser" class="add-user-form"><label for="username">Username:</label><input type="text" id="username" name="username" required><label for="password">Password:</label><input type="password" id="password" name="password" required><label for="role">Role:</label><select id="role" name="role" required><option value="">Select Role</option><option value="Admin">Admin</option><option value="Viewer">Viewer</option></select><button type="submit" class="add-button">Add</button></form>`;
                     break;
                 case "edit-user":
-                    content = `<h2>Edit User</h2><button>Edit</button><input type="text" placeholder="Enter User ID">`;
+                    content = `<h2>Edit User</h2><form method="post" action="/Admin/UpdateUser" class="edit-user-form"><label for="username">Username:</label><input type="text" id="username" name="username" required><label for="password">Password:</label><input type="password" id="password" name="password"><label for="role">Role:</label><select id="role" name="role"><option value="">Select Role</option><option value="Admin">Admin</option><option value="Viewer">Viewer</option></select><button type="submit" class="update-button">Update</button></form>`;
                     break;
                 case "delete-user":
-                    content = `<h2>Delete User</h2><button>Delete</button><input type="text" placeholder="Enter User ID">`;
+                    content = `<h2>Delete User</h2><form method="post" action="/Admin/DeleteUser" class="delete-user-form"><label for="username">Username:</label><input type="text" id="username" name="username" required><label for="role">Role:</label><select id="role" name="role" required><option value="">Select Role</option><option value="Admin">Admin</option><option value="Viewer">Viewer</option></select><button type="submit" class="delete-button">Delete</button></form>`;
                     break;
                 case "add-platform":
                     content = `<h2>Add Platform</h2><button>Add</button><input type="text" placeholder="Enter Platform Name">`;

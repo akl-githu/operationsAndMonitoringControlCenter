@@ -95,18 +95,18 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    border: 2px solid red; /* Add border around the table */
+    border: 2px dashed red; /* Add border around the table */
 }
 
 table th, table td {
-    border: 1px solid red; /* Add border for individual cells */
+    border: 1px dashed red; /* Add border for individual cells */
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 table th {
-    background-color: #1a1a1a; /* Dark background for header */
-    color: white; /* White text for header */
+    background-color: whitesmoke; /* Dark background for header */
+    color: black; /* White text for header */
 }
 
 table td {
@@ -114,11 +114,12 @@ table td {
     color: black; /* Black text for cells */
 }
 
-/* Add User Sub menu Styling */
+/* Add User Form Styling */
 .add-user-form {
     max-width: 400px;
     margin: 20px auto;
-    background-color: #1a1a1a; /* Dark background for form */
+    background-color: whitesmoke; /* Dark background for form */
+    color: #333;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
@@ -128,7 +129,7 @@ table td {
     display: block;
     margin-bottom: 10px;
     font-size: 1rem;
-    color: white; /* Label color */
+    color: #333; /* Label color */
 }
 
 .add-user-form input,
@@ -138,8 +139,8 @@ table td {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #333; /* Input background */
-    color: white; /* Input text color */
+    background-color: white; /* Input background */
+    color: #333; /* Input text color */
 }
 
 .add-user-form button {
@@ -155,6 +156,94 @@ table td {
 }
 
 .add-user-form button:hover {
+    background-color: #b30000; /* Darker red on hover */
+}
+
+/* Update User Form Styling */
+.edit-user-form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: whitesmoke; /* Dark background for form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.edit-user-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333; /* Label color */
+}
+
+.edit-user-form input,
+.edit-user-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white; /* Input background */
+    color: #333; /* Input text color */
+}
+
+.edit-user-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: red; /* Button background */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-user-form button:hover {
+    background-color: #b30000; /* Darker red on hover */
+}
+
+/* Delete User Form Styling */
+.delete-user-form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: whitesmoke; /* Dark background for form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.delete-user-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333; /* Label color */
+}
+
+.delete-user-form input,
+.delete-user-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white; /* Input background */
+    color: #333; /* Input text color */
+}
+
+.delete-user-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: red; /* Button background */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-user-form button:hover {
     background-color: #b30000; /* Darker red on hover */
 }
 

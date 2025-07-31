@@ -10,7 +10,7 @@ namespace controlCenter.Controllers
 
         public AdminController(UserService userService)
         {
-            _userService = userService?? throw new ArgumentNullException(nameof(userService));
+            _userService = userService ?? throw new ArgumentNullException(nameof(userService));
         }
 
         public IActionResult Index()
@@ -32,6 +32,25 @@ namespace controlCenter.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public IActionResult UpdateUser(string username, string password, string role)
+        {
+            // Call UserService to update the user details in the database
+            _userService.UpdateUser(username, password, role);
+
+            // Redirect back to the Admin page
+            return RedirectToAction("Index");
+        }
+        
+        [HttpPost]
+        public IActionResult DeleteUser(string username, string role)
+        {
+            // Call UserService to delete the user based on Username and Role
+            _userService.DeleteUser(username, role);
+
+            // Redirect back to the Admin page
+            return RedirectToAction("Index");
+        }
 
     }
 }

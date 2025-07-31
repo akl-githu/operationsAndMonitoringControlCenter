@@ -82,6 +82,35 @@ namespace controlCenter.Services
                 command.ExecuteNonQuery();
             }
         }
+
+        // Method to update user details
+        public void UpdateUser(string username, string password, string role)
+        {
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = new MySqlCommand("UPDATE Users SET PasswordHash = @PasswordHash, Role = @Role WHERE Username = @Username", connection);
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@PasswordHash", password);
+                command.Parameters.AddWithValue("@Role", role);
+
+                command.ExecuteNonQuery();
+            }
+        }
+
+        // Method to delete a user based on Username and Role
+        public void DeleteUser(string username, string role)
+        {
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = new MySqlCommand("DELETE FROM Users WHERE Username = @Username AND Role = @Role", connection);
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@Role", role);
+
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }
 
