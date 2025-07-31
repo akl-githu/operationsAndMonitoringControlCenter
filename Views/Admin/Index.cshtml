@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="/css/admin.css"> <!-- Link to the admin.css file -->
+        <script src="/js/menu.js"></script> <!-- link to the menu.js file -->
     </head>
     
     <body>
@@ -18,44 +19,50 @@
                 <ul>
                     <li class="menu-item">User Management
                         <ul class="submenu">
-                            <li>Add User</li>
-                            <li>Edit User</li>
-                            <li>Delete User</li>
+                            <li id="add-user">Add User</li>
+                            <li id="edit-user">Edit User</li>
+                            <li id="delete-user">Delete User</li>
                         </ul>
                     </li>
                     
                     <li class="menu-item">Platform Management
                         <ul class="submenu">
-                            <li>Add Platform</li>
-                            <li>Edit Platform</li>
-                            <li>Delete Platform</li>
+                            <li id="ayla">SmartLiving Ayla</li>
+                            <li id="sah">SmartLiving SAH</li>
+                            <li id="ai">AI-ComputerVision</li>
+                            <li id="ciot">Centralized-IOT</li>
+                            <li id="fdh">FDH-Cabinet</li>
+                            <li id="sfm">SFM-Tank</li>
+                            <li id="novatiq">SmartPipe Novatiq</li>
+                            <li id="sakr">UnifiedVideoAI SAKR</li>
+                            <li id="vsaas">VSaaS-SMB</li>
                         </ul>
                     </li>
                     
                     <li class="menu-item">Platform KPI
                         <ul class="submenu">
-                            <li>View KPI</li>
-                            <li>Update KPI</li>
+                            <li id="view-kpi">View KPI</li>
+                            <li id="update-kpi">Update KPI</li>
                         </ul>
                     </li>
                     
                     <li class="menu-item">Platform Tracker
                         <ul class="submenu">
-                            <li>Track Platform</li>
-                            <li>View Tracker Logs</li>
+                            <li id="track-platform">Track Platform</li>
+                            <li id="view-tracker-logs">View Tracker Logs</li>
                         </ul>
                     </li>
                     
                     <li class="menu-item">Help?
                         <ul class="submenu">
-                            <li>FAQs</li>
-                            <li>Contact Support</li>
+                            <li id="faqs">FAQs</li>
+                            <li id="contact-support">Contact Support</li>
                         </ul>
                     </li>
                 </ul>
             </nav><!-- Main Content Area -->
             
-            <div class="main-content">
+            <div class="main-content" id="admin-main-content">
                 <h1>Welcome to the Admin Dashboard</h1>
                 <p>Select a menu item to manage the platform or users.</p>
             </div>

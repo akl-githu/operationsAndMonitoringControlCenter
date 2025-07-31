@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Viewer Dashboard</title>
         <link rel="stylesheet" href="/css/viewer.css"> <!-- Link to the viewer.css file -->
+        <script src="/js/menu.js"></script> <!-- link to the menu.js file -->
     </head>
     
     <body>
@@ -19,15 +20,15 @@
                 <ul>
                     <li class="menu-item">Platform KPI
                         <ul class="submenu">
-                            <li>View KPI</li>
-                            <li>Update KPI</li>
+                            <li id="view-kpi">View KPI</li>
+                            <li id="update-kpi">Update KPI</li>
                         </ul>
                     </li>
                     
                     <li class="menu-item">Platform Tracker
                         <ul class="submenu">
-                            <li>Track Platform</li>
-                            <li>View Tracker Logs</li>
+                            <li id="track-platform">Track Platform</li>
+                            <li id="view-tracker-logs">View Tracker Logs</li>
                         </ul>
                     </li>
 
@@ -40,7 +41,7 @@
                 </ul>
             </nav>
             <!-- Main Content Area -->
-            <div class="main-content">
+            <div class="main-content" id="viewer-main-content">
                 <h1>Welcome to the Viewer Dashboard</h1>
                 <p>Select a menu item to view platform details or tracker logs.</p>
             </div>
