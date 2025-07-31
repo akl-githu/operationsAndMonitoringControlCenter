@@ -9,7 +9,7 @@ namespace controlCenter.Services
 
         public AuditService(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
+            _connectionString = configuration.GetConnectionString("DefaultConnection")?? throw new ArgumentNullException(nameof(configuration));
         }
 
         public void RecordAction(string username, string action)

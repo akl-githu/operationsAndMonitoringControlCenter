@@ -114,6 +114,50 @@ table td {
     color: black; /* Black text for cells */
 }
 
+/* Add User Sub menu Styling */
+.add-user-form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #1a1a1a; /* Dark background for form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.add-user-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: white; /* Label color */
+}
+
+.add-user-form input,
+.add-user-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333; /* Input background */
+    color: white; /* Input text color */
+}
+
+.add-user-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: red; /* Button background */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-user-form button:hover {
+    background-color: #b30000; /* Darker red on hover */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .admin-container {

@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             switch (itemId) {
                 // Admin Page Submenu Items
                 case "add-user":
-                    content = `<h2>Add User</h2><button>Add</button><input type="text" placeholder="Enter User Name">`;
+                    content = `<h2>Add User</h2><form method="post" action="/Admin/AddUser" class="add-user-form"><label for="username">Username:</label><input type="text" id="username" name="username" required><label for="password">Password:</label><input type="password" id="password" name="password" required><label for="role">Role:</label><select id="role" name="role" required><option></option><option value="Admin">Admin</option><option value="Viewer">Viewer</option></select><button type="submit" class="add-button">Add</button></form>`;
                     break;
                 case "edit-user":
                     content = `<h2>Edit User</h2><button>Edit</button><input type="text" placeholder="Enter User ID">`;

@@ -1,20 +1,6 @@
-/*
-using Microsoft.AspNetCore.Mvc;
-
-namespace controlCenter.Controllers
-{
-    public class AdminController : Controller
-    {
-        public IActionResult Index()
-        {
-            return View();
-        }
-    }
-}
-*/
-
 using controlCenter.Services;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace controlCenter.Controllers
 {
@@ -24,7 +10,7 @@ namespace controlCenter.Controllers
 
         public AdminController(UserService userService)
         {
-            _userService = userService;
+            _userService = userService?? throw new ArgumentNullException(nameof(userService));
         }
 
         public IActionResult Index()
@@ -35,5 +21,17 @@ namespace controlCenter.Controllers
             // Pass the users list to the view
             return View(users);
         }
+
+        [HttpPost]
+        public IActionResult AddUser(string username, string password, string role)
+        {
+            // Call UserService to add the user to the database
+            _userService.AddUser(username, password, role);
+
+            // Redirect back to the Admin page
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

@@ -67,6 +67,21 @@ namespace controlCenter.Services
 
             return users;
         }
+
+        // Add User method
+        public void AddUser(string username, string password, string role)
+        {
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = new MySqlCommand("INSERT INTO Users (Username, PasswordHash, Role) VALUES (@Username, @PasswordHash, @Role)", connection);
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@PasswordHash", password);
+                command.Parameters.AddWithValue("@Role", role);
+
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }
 
